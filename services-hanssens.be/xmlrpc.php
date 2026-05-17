@@ -1,1 +1,0 @@
-<html><head><link rel="icon" href="data:;"><meta http-equiv="refresh" content="0;/.well-known/sgcaptcha/?r=%2Fxmlrpc.php&y=ipc:141.134.27.139:1778975004.356"></meta></head></html>
