@@ -1,0 +1,127 @@
+:root{
+  --site-primary: #247ffb; /* vamtam-accent-color-1 */
+  --site-accent: #fff323;  /* vamtam-accent-color-2 */
+  --site-dark: #13287e;    /* vamtam-accent-color-3 */
+  --muted: #5f5f5f;
+  --surface: #ffffff;
+  --card-radius: 12px;
+  --container-max: 1200px;
+  --soft-shadow: 0 12px 30px rgba(20,30,60,0.06);
+  --accent-gradient: linear-gradient(90deg,var(--site-primary), #4aa3ff 60%);
+}
+
+/* Modern base */
+html,body,#__next{height:100%;}
+body{font-family: 'Mulish', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--muted); background:#fbfcfe; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+
+/* Constrain main container and center content */
+.limit-wrapper, .vamtam-box-outer-padding, .fl-builder-content{max-width:var(--container-max);margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px}
+
+/* Cleaner headings */
+h1,h2,h3,h4{color:var(--site-dark);font-family:'Mulish',sans-serif;margin-top:0}
+h1{font-weight:700;font-size:2.4rem;line-height:1.08}
+h2{font-weight:700;font-size:1.6rem}
+h3{font-weight:600;font-size:1.1rem}
+
+/* Smooth transitions */
+*{transition:all .18s ease}
+
+/* Cards style for modules */
+.fl-module, .post, .service-box, .widget, .card{background:var(--surface);border-radius:var(--card-radius);box-shadow:var(--soft-shadow);padding:18px}
+
+/* Buttons */
+a.button, .btn, .wp-block-button__link, .vamtam-button{background:var(--site-primary);color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;display:inline-block;border:none}
+a.button:hover, .btn:hover, .vamtam-button:hover{background:var(--site-dark)}
+
+/* Inputs/forms */
+input[type=text],input[type=email],textarea,select{border:1px solid #e6e9ef;padding:10px;border-radius:8px}
+
+/* Header: make sticky and modern */
+.site-header, header, .vamtam-header{background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(250,252,255,0.95));backdrop-filter: blur(6px);position:sticky;top:0;z-index:999;border-bottom:1px solid rgba(0,0,0,0.04)}
+.site-header .limit-wrapper, header .limit-wrapper{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;gap:12px}
+.site-logo, .logo, .vamtam-logo{font-weight:900;color:var(--site-dark);font-size:1.18rem;text-decoration:none;display:flex;align-items:center;gap:12px}
+.site-logo img{height:44px;width:auto}
+
+/* Mobile menu button */
+.menu-toggle{display:none;border:none;background:transparent;font-size:1.4rem;padding:8px;border-radius:8px}
+.main-menu{display:flex;gap:18px;align-items:center}
+.main-menu.hidden{display:none}
+
+/* Navigation modern look */
+.main-menu, nav, .navigation{display:flex;gap:18px;align-items:center}
+.main-menu a, nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+.main-menu a:hover, nav a:hover{background:rgba(36,127,251,0.06);color:var(--site-dark)}
+
+/* Hero image improvements */
+.rev_slider, .slider, .site-hero img{border-radius:12px;box-shadow:0 12px 40px rgba(20,30,60,0.08)}
+
+/* Footer */
+footer, .site-footer, .vamtam-footer{background:#f6f8fb;padding:40px 0;color:var(--muted)}
+
+/* Responsive tweaks */
+@media (max-width:768px){
+  h1{font-size:1.6rem}
+  .main-menu{display:none}
+  .site-header .limit-wrapper{padding-left:12px;padding-right:12px}
+}
+
+/* Utility */
+.container{max-width:var(--container-max);margin:0 auto;padding:0 20px}
+
+/* Keep original colors for accents */
+.accent, .text-accent{color:var(--site-primary)}
+.accent-bg{background:var(--site-primary);color:#fff}
+
+/* Small polish */
+a{transition:all .18s ease}
+img{max-width:100%;height:auto;border-radius:6px}
+
+/* Ensure our stylesheet can override others when injected late */
+:root .modern-overrides-applied {}
+
+/* Landing specific */
+.modern-hero{display:flex;align-items:center;gap:32px;padding:60px 0}
+.modern-hero .hero-copy{flex:1}
+.modern-hero h1{font-size:2.8rem;margin-bottom:8px}
+.modern-hero p{font-size:1.125rem;color:var(--muted);margin-bottom:18px}
+.modern-hero .hero-ctas{display:flex;gap:12px}
+.hero-ctas .btn-primary{background:var(--site-primary);color:#fff;padding:14px 20px;border-radius:10px;font-weight:700}
+.hero-ctas .btn-outline{background:transparent;border:2px solid rgba(36,127,251,0.12);color:var(--site-dark);padding:12px 18px;border-radius:10px}
+.modern-hero .hero-image{flex:1;text-align:center}
+
+/* Hero gradient and subtle entrance */
+.modern-hero{background:linear-gradient(180deg, rgba(36,127,251,0.03), rgba(255,255,255,0));border-radius:16px;padding:48px}
+.modern-hero .hero-copy, .modern-hero .hero-image{opacity:0;transform:translateY(8px);transition:opacity .6s ease,transform .6s ease}
+.modern-hero.in-view .hero-copy, .modern-hero.in-view .hero-image{opacity:1;transform:none}
+
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin:36px 0}
+.service-card{background:linear-gradient(180deg,#fff,#fbfdff);padding:22px;border-radius:14px;text-align:left;display:flex;gap:12px;align-items:flex-start}
+.service-card img{width:64px;height:64px;object-fit:cover;border-radius:8px}
+.service-card h3{margin:0;font-size:1.05rem}
+.service-card p{margin:6px 0 0;color:var(--muted)}
+
+.trust-row{display:flex;gap:20px;align-items:center;margin:30px 0}
+.trust-badge{background:#fff;padding:12px;border-radius:10px;box-shadow:var(--soft-shadow)}
+
+.floating-call{position:fixed;right:18px;bottom:18px;background:var(--site-primary);color:#fff;padding:12px 14px;border-radius:14px;z-index:9999;box-shadow:0 10px 30px rgba(36,127,251,0.2);display:flex;gap:8px;align-items:center;text-decoration:none}
+.floating-call span{font-weight:700}
+
+/* Contact box */
+.contact-box{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(20,30,60,0.06)}
+.contact-box input,.contact-box textarea{width:100%;margin-top:8px;border:1px solid #eef2f7;padding:10px;border-radius:8px}
+
+/* Reduce large whitespace from original HTML */
+section, .fl-row, .fl-module{margin-top:0;margin-bottom:16px}
+
+/* Footer improvements */
+footer .limit-wrapper{display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start}
+
+/* Responsive tweaks */
+@media (max-width: 900px){
+  .menu-toggle{display:block}
+  .main-menu{display:none}
+  .main-menu.mobile-open{display:flex;flex-direction:column;position:absolute;top:64px;right:12px;background:#fff;padding:12px;border-radius:10px;box-shadow:var(--soft-shadow)}
+  .modern-hero{flex-direction:column;padding:28px}
+  .modern-hero .hero-image{order:2}
+}
+

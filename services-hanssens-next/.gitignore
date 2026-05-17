@@ -1,0 +1,6 @@
+
+# Local build outputs
+out/
+.next/
+node_modules/
+.DS_Store

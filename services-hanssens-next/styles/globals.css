@@ -1,0 +1,17 @@
+/* Global stylesheet that re-uses the theme's compiled CSS from public */
+@import url('/wp-content/themes/clany/vamtam/assets/css/dist/all333e.css');
+@import url('/wp-content/themes/clany/vamtam/assets/css/dist/widgets/general333e.css');
+@import url('/wp-content/themes/clany/vamtam/assets/css/dist/responsive/layout-max333e.css');
+@import url('/wp-content/themes/clany/vamtam/assets/css/dist/responsive/layout-small333e.css');
+@import url('/wp-content/themes/clany/vamtam/assets/css/dist/responsive/mobile-header333e.css');
+
+/* Small fixes for Next.js root element */
+html, body, #__next {
+  height: 100%;
+}
+
+/* Ensure images are responsive */
+img { max-width: 100%; height: auto; }
+/* Minimal reset for served static HTML */
+html,body,#__next{height:100%;}
+body{margin:0;font-family:Arial,Helvetica,sans-serif}
