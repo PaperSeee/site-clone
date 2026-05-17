@@ -1,0 +1,7 @@
+Sitemap: https://services-hanssens.be/sitemap.xml
+Sitemap: https://services-hanssens.be/news-sitemap.xml
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://services-hanssens.be/sitemap_index.xml
